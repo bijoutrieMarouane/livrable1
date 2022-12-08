@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 07:06 PM
+-- Generation Time: Dec 08, 2022 at 07:24 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -30,10 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `items` (
   `id_i` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `prix` int(11) NOT NULL,
-  `quantité` int(11) NOT NULL
+  `prix` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
