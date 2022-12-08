@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 12:24 PM
+-- Generation Time: Dec 08, 2022 at 07:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -24,17 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
-  `id_cat` int(11) NOT NULL,
-  `nameCat` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `items`
 --
 
@@ -43,8 +32,7 @@ CREATE TABLE `items` (
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `cat_ID` int(11) NOT NULL,
-  `pris` int(11) NOT NULL,
+  `prix` int(11) NOT NULL,
   `quantité` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -76,12 +64,6 @@ INSERT INTO `users` (`id_u`, `username`, `email`, `password`, `groupID`, `avatar
 --
 
 --
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id_cat`);
-
---
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
@@ -98,12 +80,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id_cat` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
@@ -114,16 +90,6 @@ ALTER TABLE `items`
 --
 ALTER TABLE `users`
   MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `categories`
---
-ALTER TABLE `categories`
-  ADD CONSTRAINT `ID_CATEGORIE` FOREIGN KEY (`id_cat`) REFERENCES `items` (`id_i`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
