@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 07:24 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Hôte : 127.0.0.1
+-- Généré le : jeu. 26 jan. 2023 à 21:21
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bijouterie`
+-- Base de données : `bijouterie`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `items`
+-- Structure de la table `items`
 --
 
 CREATE TABLE `items` (
@@ -37,7 +37,7 @@ CREATE TABLE `items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -45,49 +45,40 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `groupID` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0 pour membres\r\n1 pour Admin',
-  `avatar` varchar(255) NOT NULL
+  `groupID` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0 pour membres\r\n1 pour Admin'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_u`, `username`, `email`, `password`, `groupID`, `avatar`) VALUES
-(1, 'marouane', 'uanemaro216@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, ''),
-(2, 'youssef', 'youssef@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, '');
-
---
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `items`
+-- Index pour la table `items`
 --
 ALTER TABLE `items`
   ADD PRIMARY KEY (`id_i`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_u`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `items`
+-- AUTO_INCREMENT pour la table `items`
 --
 ALTER TABLE `items`
   MODIFY `id_i` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
